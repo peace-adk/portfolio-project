@@ -47,6 +47,10 @@ a:hover {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+}
+
 /*Background color divs*/
 
 .section-plum {
@@ -164,6 +168,7 @@ nav a:hover,
 nav [class*="fa-"]:hover {
   color: var(--magenta);
 }
+
 /* Projects section */
 #projects {
   padding: 4rem 1rem;
@@ -203,6 +208,61 @@ margin: 0;
   gap: 1rem;
   font-size: 1rem;
 }
+
+#projects img {
+  margin: 2rem 0 4rem 0;
+  border-left: 1px solid var(--aqua);
+  border-top: 1px solid var(--aqua);
+  border-radius: 25px;
+  padding: 1rem;
+
+}
+
+@media (min-width: 550px) {
+  article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+
+  #projects {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #projects img{
+    grid-column: 1/6;
+    grid-row: 1/2;
+  }
+  
+  .text {
+    order: 2;
+    text-align: right;
+    grid-column: 5/11;
+    grid-row: 1/2;
+
+  }
+
+  #projects ul {
+    justify-content: flex-end;
+  }
+
+  #projects .reverse .text {
+    order: 2;
+    text-align: left;
+    grid-column: 1/7;
+  }
+
+  #projects .reverse img {
+    grid-column: 6/11;
+    grid-row: 1/2;
+  }
+
+  #projects .reverse ul {
+    justify-content: flex-start;
+  }
+}
+
 
 @media (min-width: 850px) {
   nav {
